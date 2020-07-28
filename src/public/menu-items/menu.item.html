@@ -1,0 +1,28 @@
+<div class="menu-item-tile col-md-6">
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="menu-item-photo">
+        <div>{{$ctrl.menuItemName.short_name}}</div>
+        <img
+          class="img-responsive"
+          width="250"
+          height="150"
+          ng-src="{{$ctrl.basePath}}/images/{{$ctrl.menuItemName.short_name}}.jpg"
+          alt="{{$ctrl.menuItemName.name}}"
+        />
+      </div>
+      <div class="menu-item-price">
+        {{$ctrl.menuItemName.price_small | currency : "&#8377;" }}<span>
+          {{$ctrl.menuItemName.small_portion_name}}</span
+        >
+        {{$ctrl.menuItemName.price_large | currency : "&#8377;" }}
+        <span>{{$ctrl.menuItemName.large_portion_name}}</span>
+      </div>
+    </div>
+    <div class="menu-item-description col-sm-7">
+      <h3 class="menu-item-title">{{$ctrl.menuItemName.name}}</h3>
+      <p class="menu-item-details">{{$ctrl.menuItemName.description}}</p>
+    </div>
+  </div>
+  <hr class="visible-xs" />
+</div>

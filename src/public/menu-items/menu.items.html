@@ -1,0 +1,26 @@
+<div class="container">
+  <h2 id="menu-categories-title" class="text-center">
+    {{ menuItemsCtrl.menuItems.category.name}} Menu
+  </h2>
+
+  <div class="text-center">
+    {{ menuItemsCtrl.menuItems.category.special_instructions}}
+  </div>
+
+  <menu-item
+    ng-repeat="item in  menuItemsCtrl.menuItems.menu_items"
+    menu-item-name="item"
+  >
+  </menu-item>
+  <b
+    style="
+      font-size: 20px;
+      float: right;
+      border: 1px rgb(214, 30, 30) solid;
+      background-color: rgb(228, 208, 208);
+      position: relative;
+      padding: 5px;
+    "
+    ><a ui-sref="public.menu">Back to menu</a></b
+  >
+</div>
